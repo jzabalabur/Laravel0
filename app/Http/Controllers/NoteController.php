@@ -66,6 +66,8 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        //
+        $note=Note::where('id',$id)->delete();
+        return redirect()->route('note.index');
+
     }
 }
